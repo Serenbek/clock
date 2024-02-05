@@ -34,9 +34,9 @@ body {
 }
 
 #clockInner::after {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg); /* для поддержки веб-кит браузеров, таких как Google Chrome и Safari */
+  -moz-transform: rotate(90deg); /*  для браузеров, поддерживающих префикс -moz- (например, Firefox) */
+  transform: rotate(90deg); /* для вращения элемента, которое применяется в браузерах, поддерживающих стандартную CSS-трансформацию */
 }
 
 #clockInner::after,
@@ -76,9 +76,9 @@ body {
 }
 
 #clockInner .marking.marking-four {
-  -webkit-transform: rotate(150deg); /*бул*/
-  -moz-transform: rotate(150deg); /**/
-  transform: rotate(150deg); /**/
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  transform: rotate(150deg);
 }
 
 .clockface {
@@ -89,8 +89,8 @@ body {
   width: 80%;
   background: #282828;
   border-radius: 100%;
-  -webkit-border-radius: 100%; /**/
-  -moz-border-radius: 100%; /**/
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
   z-index: 1;
 }
 
@@ -112,7 +112,7 @@ body {
 #second {
   position: absolute;
   border-radius: 10px;
-  transform-origin: bottom; /**/
+  transform-origin: bottom; /* вращение или масштабирование, будут происходить относительно нижней грани */
   z-index: 5;
 }
 
